@@ -4,14 +4,13 @@ print("   2. View transaction history")
 print("   3. Remove transaction record")
 print("   4. Exit program")
 
-transaction = ""
+transaction = []
 
 def record_transaction():
-    global transaction
-    
     calendar = input("\nDate of transaction (YY/MM/DD): ")
     type_money = input("What type of transaction (Expense/Income): ")
     description = input("Description about transaction: ")
+    
     while True:
         money_input = input("Amount used/received: ")
         if money_input.isdigit() and int(money_input) > 0:
@@ -26,7 +25,7 @@ def record_transaction():
     print("Description:", description)
     print("Amount:", money)
     
-    transaction += f"{calendar}, {type_money}, {description}, {money}\n"
+   transaction.append([calendar, type_money, description, money])
     
 while True:
     choice = int(input("\nChoose a number (1 - 4): "))
@@ -39,7 +38,7 @@ while True:
         if not transaction:
             print("No transaction made yet")
         else:
-            record = transaction.strip().split("\n")
-
-            for index, number in enumerate(record, start=1):
-                print(f"{index}. {number}")
+            number = 1
+            for index in transaction:
+                print(f"{number}. {index[0]}, {index[1]}, {index[2]}, {index[3]}")
+                number += 1
