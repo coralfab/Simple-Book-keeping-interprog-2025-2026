@@ -76,7 +76,7 @@ def record_transaction():
         
             
 while True:
-    print("======BOOKKEEPING PROGRAM ======")
+    print("====== SIMPLE BOOKKEEPING PROGRAM ======")
     print("   1. Record Transaction")
     print("   2. View transaction history")
     print("   3. Remove transaction record")
