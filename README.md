@@ -6,8 +6,10 @@
 - How to open program
 
   - If stranger to coding copypaste bookk.py and paste to a python online compiler:
-    - (https://www.programiz.com/python-programming/online-compiler/) and run.
-      - Then click **run**		
+    - (https://www.programiz.com/python-programming/online-compiler/).
+      - Then click **run**
+      - Note:
+      - If py has import programiz cannot work.
    
   - If know how to code:
     - Download 'bookk.py' 
